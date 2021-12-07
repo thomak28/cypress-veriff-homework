@@ -1,0 +1,25 @@
+{
+  "name": "cypress-veriff-homework",
+  "version": "1.0.0",
+  "description": "Doing homework for vertiff with cypress framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomak28/cypress-veriff-homework.git"
+  },
+  "keywords": [
+    "homework"
+  ],
+  "author": "Toomas Lõokene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomak28/cypress-veriff-homework/issues"
+  },
+  "homepage": "https://github.com/thomak28/cypress-veriff-homework#readme",
+  "devDependencies": {
+    "cypress": "^9.1.1"
+  }
+}
