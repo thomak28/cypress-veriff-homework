@@ -1,5 +1,5 @@
 # cypress-veriff-homework
-Pre-requisites: node.js
+Pre-requisites: node.js & git
 
 How to run tests:
 1) In the project folder > "cypress-veriff-homework" run the script 
