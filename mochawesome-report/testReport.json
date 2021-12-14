@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-14T08:51:52.036Z",
+    "end": "2021-12-14T08:51:53.920Z",
+    "duration": 1884,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6808f782-0347-4e65-8929-53dc5ad39bca",
+      "title": "",
+      "fullFile": "cypress/integration/veriff-demo-tests/api/TC_01_sessionNegativeScenarios.spec.js",
+      "file": "cypress/integration/veriff-demo-tests/api/TC_01_sessionNegativeScenarios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+          "title": "Checks different API negative scenarios with API request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Checks that session token not returned if document country: 'EEE'",
+              "fullTitle": "Checks different API negative scenarios with API request Checks that session token not returned if document country: 'EEE'",
+              "timedOut": null,
+              "duration": 480,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// TODO: Report defect -> probabaly \"document_country\":\"\" should give an error \ncy.request({\n  method: 'POST',\n  url: Cypress.config().baseUrl,\n  failOnStatusCode: false,\n  headers: {},\n  body: {\n    \"full_name\": '',\n    \"lang\": '',\n    \"document_country\": docCountryEl,\n    \"document_type\": 'PASSPORT',\n    \"additionalData\": {\n      \"isTest\": false\n    }\n  }\n}).then(res => {\n  expect(res.status).to.eq(400);\n  expect(res.body).to.be.empty;\n});",
+              "err": {},
+              "uuid": "18e74925-0e15-46de-91ab-e7628a413991",
+              "parentUUID": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks that session token not returned if document country: '868'",
+              "fullTitle": "Checks different API negative scenarios with API request Checks that session token not returned if document country: '868'",
+              "timedOut": null,
+              "duration": 196,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// TODO: Report defect -> probabaly \"document_country\":\"\" should give an error \ncy.request({\n  method: 'POST',\n  url: Cypress.config().baseUrl,\n  failOnStatusCode: false,\n  headers: {},\n  body: {\n    \"full_name\": '',\n    \"lang\": '',\n    \"document_country\": docCountryEl,\n    \"document_type\": 'PASSPORT',\n    \"additionalData\": {\n      \"isTest\": false\n    }\n  }\n}).then(res => {\n  expect(res.status).to.eq(400);\n  expect(res.body).to.be.empty;\n});",
+              "err": {},
+              "uuid": "aa8f0bd2-54a8-4608-a08a-6486a8161b4e",
+              "parentUUID": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks that session token not returned if document country: '%//'",
+              "fullTitle": "Checks different API negative scenarios with API request Checks that session token not returned if document country: '%//'",
+              "timedOut": null,
+              "duration": 168,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// TODO: Report defect -> probabaly \"document_country\":\"\" should give an error \ncy.request({\n  method: 'POST',\n  url: Cypress.config().baseUrl,\n  failOnStatusCode: false,\n  headers: {},\n  body: {\n    \"full_name\": '',\n    \"lang\": '',\n    \"document_country\": docCountryEl,\n    \"document_type\": 'PASSPORT',\n    \"additionalData\": {\n      \"isTest\": false\n    }\n  }\n}).then(res => {\n  expect(res.status).to.eq(400);\n  expect(res.body).to.be.empty;\n});",
+              "err": {},
+              "uuid": "739bb35f-8ad0-4483-b2c8-afb0cbd85010",
+              "parentUUID": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks that session token not returned if document type: 'DRIVERS_LICENSE2'",
+              "fullTitle": "Checks different API negative scenarios with API request Checks that session token not returned if document type: 'DRIVERS_LICENSE2'",
+              "timedOut": null,
+              "duration": 196,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// TODO: Report defect -> probabaly \"document_type\":\"\" should give an error \ncy.request({\n  method: 'POST',\n  url: Cypress.config().baseUrl,\n  failOnStatusCode: false,\n  headers: {},\n  body: {\n    \"full_name\": '',\n    \"lang\": '',\n    \"document_country\": 'EE',\n    \"document_type\": docTypeEl,\n    \"additionalData\": {\n      \"isTest\": false\n    }\n  }\n}).then(res => {\n  expect(res.status).to.eq(400);\n  expect(res.body).to.be.empty;\n});",
+              "err": {},
+              "uuid": "5cdff664-1331-451f-b5b7-87a6b292dd36",
+              "parentUUID": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks that session token not returned if document type: '%/()'",
+              "fullTitle": "Checks different API negative scenarios with API request Checks that session token not returned if document type: '%/()'",
+              "timedOut": null,
+              "duration": 164,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// TODO: Report defect -> probabaly \"document_type\":\"\" should give an error \ncy.request({\n  method: 'POST',\n  url: Cypress.config().baseUrl,\n  failOnStatusCode: false,\n  headers: {},\n  body: {\n    \"full_name\": '',\n    \"lang\": '',\n    \"document_country\": 'EE',\n    \"document_type\": docTypeEl,\n    \"additionalData\": {\n      \"isTest\": false\n    }\n  }\n}).then(res => {\n  expect(res.status).to.eq(400);\n  expect(res.body).to.be.empty;\n});",
+              "err": {},
+              "uuid": "52b64829-7b47-431f-ab47-22c3727c8fe7",
+              "parentUUID": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checks that session details are not given if session token is incorrect",
+              "fullTitle": "Checks different API negative scenarios with API request Checks that session details are not given if session token is incorrect",
+              "timedOut": null,
+              "duration": 654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Get correct sessionToken\ncy.request({\n  method: 'POST',\n  url: Cypress.config().baseUrl,\n  headers: {},\n  body: {\n    \"full_name\": '',\n    \"lang\": '',\n    \"document_country\": 'EE',\n    \"document_type\": 'PASSPORT',\n    \"additionalData\": {\n      \"isTest\": false\n    }\n  }\n}).then(res => {\n  expect(res.status).to.eq(200);\n  expect(res.body.sessionToken).to.be.a(\"string\");\n  let sessionToken = res.body.sessionToken; // Session request with incorrect sessionToken\n  cy.request({\n    method: 'GET',\n    url: `${Cypress.env('integrationUrl')}${Cypress.env('sessionApi')}`,\n    failOnStatusCode: false,\n    // Adding prefix: '+wrong token' to add wrong sessionToken\n    headers: {\n      'Authorization': `Bearer ${sessionToken}+wrong token`\n    }\n  }).then(res => {\n    expect(res.status).to.eq(401);\n    expect(res.body.message).to.equal('Authentication failed');\n    expect(res.body.code).to.equal('E00010');\n    expect(res.body.level).to.equal('error');\n    expect(res.body.service).to.equal('end-user-backend');\n  });\n});",
+              "err": {},
+              "uuid": "ddb182ce-5396-457c-a676-a758818537e0",
+              "parentUUID": "6e9ac556-d1ae-40d2-9f8d-83e56e0531ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18e74925-0e15-46de-91ab-e7628a413991",
+            "aa8f0bd2-54a8-4608-a08a-6486a8161b4e",
+            "739bb35f-8ad0-4483-b2c8-afb0cbd85010",
+            "5cdff664-1331-451f-b5b7-87a6b292dd36",
+            "52b64829-7b47-431f-ab47-22c3727c8fe7",
+            "ddb182ce-5396-457c-a676-a758818537e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1858,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "testReport",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportFilename": "testReport"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

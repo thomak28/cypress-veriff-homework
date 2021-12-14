@@ -1,0 +1,64 @@
+{
+  "configurations": [
+    {
+      "fullName": "Toomas Lõokene",
+      "language": "Eesti",
+      "country": "Estonia",
+      "documentType": "Passport",
+      "expectedLabels": {
+           "demoSessionSecondPageH1Text": "Alustame tuvastamist",
+           "demoSessionThirdPageH1Text":"Palun sea oma pass valmis."
+          }
+    },
+    {
+      "fullName": "Siim-Malle-Rait Kuri-Muri",
+      "language": "Eesti",
+      "country": "Estonia",
+      "documentType": "ID Card",
+      "expectedLabels": {
+           "demoSessionSecondPageH1Text": "Alustame tuvastamist",
+           "demoSessionThirdPageH1Text":"Palun sea oma ID-kaart valmis."
+          }
+    },
+    {
+      "fullName": "Aet Ait",
+      "language": "Eesti",
+      "country": "Estonia",
+      "documentType": "Residence Permit",
+      "expectedLabels": {
+           "demoSessionSecondPageH1Text": "Alustame tuvastamist",
+           "demoSessionThirdPageH1Text":"Palun sea oma elamisloakaart valmis."
+          }
+    },
+    {
+      "fullName": "Leopold Kolmas Üks-jalg-värav",
+      "language": "Eesti",
+      "country": "Estonia",
+      "documentType": "Driver's license",
+      "expectedLabels": {
+           "demoSessionSecondPageH1Text": "Alustame tuvastamist",
+           "demoSessionThirdPageH1Text":"Palun sea oma juhiluba valmis."
+          }
+    },
+    {
+      "fullName": "Micheal Jordan Junior",
+      "language": "English",
+      "country": "United States of America",
+      "documentType": "Passport",
+      "expectedLabels": {
+           "demoSessionSecondPageH1Text": "Let's get you verified",
+           "demoSessionThirdPageH1Text":"Please have your passport ready."
+          }
+    },
+    {
+      "fullName": "Ahmed von Seseseko O'neil",
+      "language": "Türkçe",
+      "country": "Turkey",
+      "documentType": "Driver's license",
+      "expectedLabels": {
+           "demoSessionSecondPageH1Text": "Hadi kimliğinizi doğrulayalım",
+           "demoSessionThirdPageH1Text":"Lütfen ehliyetinizi hazırlayın."
+          }
+    }
+  ]
+}

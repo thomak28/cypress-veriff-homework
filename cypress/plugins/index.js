@@ -9,14 +9,40 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
+/* eslint-disable no-console */
+
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
 /**
  * @type {Cypress.PluginConfig}
  */
-// eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+ module.exports = (on, config) => {
+  const items = {}
+
+  // cy.task() requires returning a Promise
+  // or anything BUT undefined to signal that
+  // the task is finished
+  // see https://on.cypress.io/task
+  on('task', {
+    set ({ name, value }) {
+      console.log('setting %s', name)
+      if (typeof value === 'undefined') {
+        // since we cannot return undefined from the cy.task
+        // let's not allow storing undefined
+        throw new Error(`Cannot store undefined value for item "${name}"`)
+      }
+      items[name] = value
+      return null
+    },
+    get (name) {
+      if (name in items) {
+        console.log('returning item %s', name)
+        return items[name]
+      }
+      const msg = `Missing item "${name}"`
+      console.error(msg)
+      throw new Error(msg)
+    },
+  })
 }

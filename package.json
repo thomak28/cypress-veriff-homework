@@ -4,7 +4,14 @@
   "description": "Doing homework for vertiff with cypress framework.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run --headless --config video=false",
+    "delete:reportFolder": "npx rimfar mochawesome-report",
+    "test:cli": "npm run delete:reportFolder && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json",
+    "test:run:and:create:report": "npm run delete:reportFolder && npm run cy:run && npm run create:html:report"
   },
   "repository": {
     "type": "git",
@@ -20,6 +27,11 @@
   },
   "homepage": "https://github.com/thomak28/cypress-veriff-homework#readme",
   "devDependencies": {
-    "cypress": "^9.1.1"
+    "cypress": "^9.1.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1"
   }
 }
