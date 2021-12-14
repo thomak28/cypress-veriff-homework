@@ -7,7 +7,7 @@ apiSessionData.documentType.forEach((docTypeElem) => {
 
   describe(`Positve API scenarios with the conf: '${apiSessionData.fullName}', '${apiSessionData.language}', '${apiSessionData.documentCountry}', '${docTypeElem}'`, () => {
 
-    it('Configures the user data and gets the session token.', () => {
+    it(`Configures the user data and gets the session token with the POST request: '${Cypress.config().baseUrl}'`, () => {
       cy.request({
         method: 'POST',
         url: Cypress.config().baseUrl,
@@ -30,7 +30,7 @@ apiSessionData.documentType.forEach((docTypeElem) => {
       });   
     })
 
-    it('Gets the session ID and initData & confirms that session detaila are correct in the response.', () => {
+    it(`Gets the session ID and initData & confirms that session detaila are correct in the response. With the GET request: '${Cypress.env('integrationUrl')}${Cypress.env('sessionApi')}'`, () => {
       // Get session token  
       cy.task('get', 'sessionToken').then(sessionToken => {sessionToken               
         cy.request({

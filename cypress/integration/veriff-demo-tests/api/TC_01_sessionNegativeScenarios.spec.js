@@ -4,11 +4,27 @@ import  negSceApiSessionData from  '../../../fixtures/negSceApiSessionData.json'
 
 describe(`Checks different API negative scenarios with API request`, () => {
   
+  it(`Error given when POST request: '${Cypress.config().baseUrl}' body is empty.`, () => {
+    
+    cy.request({
+      method: 'POST',
+      url: Cypress.config().baseUrl,
+      failOnStatusCode: false, 
+      headers: {},
+      body:
+      { 
+        
+      }
+    }).then((res) => {
+      expect(res.status).to.eq(500)
+    })
+  })    
+
   // Looping different document country confs
   negSceApiSessionData.documentCountry.forEach((docCountryEl) => {   
 
-    it(`Checks that session token not returned if document country: '${docCountryEl}'`, () => {
-      // TODO: Report defect -> probabaly "document_country":"" should give an error 
+    it(`Error given when wrong document country: '${docCountryEl}' used in the POST request: '${Cypress.config().baseUrl}'`, () => {
+      
       cy.request({
         method: 'POST',
         url: Cypress.config().baseUrl,
@@ -34,9 +50,8 @@ describe(`Checks different API negative scenarios with API request`, () => {
   // Looping different document type confs
   negSceApiSessionData.documentType.forEach((docTypeEl) => {   
 
-    it(`Checks that session token not returned if document type: '${docTypeEl}'`, () => {
-      // TODO: Report defect -> probabaly "document_type":"" should give an error 
-      
+    it(`Error given when wrong document type: '${docTypeEl}' used in the POST request: '${Cypress.config().baseUrl}'`, () => {
+   
       cy.request({
         method: 'POST',
         url: Cypress.config().baseUrl,
@@ -59,7 +74,7 @@ describe(`Checks different API negative scenarios with API request`, () => {
     })
   })      
   
-  it(`Checks that session details are not given if session token is incorrect`, () => {
+  it(`Error given when session token is wrong in the GET request: '${Cypress.env('integrationUrl')}${Cypress.env('sessionApi')}'`, () => {
     
     // Get correct sessionToken
     cy.request({
