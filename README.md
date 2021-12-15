@@ -12,3 +12,6 @@ How to run tests (Tested with Windows not tested on MacOS):
 > npm run cy:run
 6) Sometimes generating the report fails (usually when tests are failing, seems like a "mochawesome" report bug), so after running tests, run the script: 
 > npm run create:html:report
+
+Reports folder cleanup: 
+> npm run delete:reportFolder
