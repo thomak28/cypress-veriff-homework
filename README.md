@@ -2,12 +2,13 @@
 Pre-requisites: node.js & git
 
 How to run tests (Tested with Windows not tested on MacOS):
-1) Clone the repo
-2) Open the project folder: "cypress-veriff-homework" 
-3) run the script (running tests and creating report)
+1) Clone the repo 
+> git clone https://github.com/thomak28/cypress-veriff-homework.git
+3) Open the project folder: "cypress-veriff-homework"
+> npm intall 
+4) Run the script (running tests and creating report)
 > npm run test:run:and:create:report
-4) running without the report generation 
+5) running without the report generation 
 > npm run cy:run
-
-Remark: Sometimes generating the report fails (usually when tests are failing, seems like a "mochawesome" report bug), so after running tests, run the script: 
+6) Sometimes generating the report fails (usually when tests are failing, seems like a "mochawesome" report bug), so after running tests, run the script: 
 > npm run create:html:report
