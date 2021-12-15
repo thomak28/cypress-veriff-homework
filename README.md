@@ -1,7 +1,7 @@
 # cypress-veriff-homework
 Pre-requisites: node.js & git
 
-How to run tests (Tested with Windows not tested on MacOS):
+How to run tests:
 1) Clone the repo 
 > git clone https://github.com/thomak28/cypress-veriff-homework.git
 3) Open the project folder: "cypress-veriff-homework"
